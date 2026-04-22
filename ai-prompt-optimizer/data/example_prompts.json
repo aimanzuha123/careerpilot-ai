@@ -1,0 +1,122 @@
+{
+  "examples": [
+    {
+      "id": "ex_001",
+      "domain": "ai_ml",
+      "intent": "instruction",
+      "original": "make a neural network",
+      "optimized": "You are an expert deep learning engineer. Design and implement a feedforward neural network in Python using PyTorch for image classification on the CIFAR-10 dataset.\n\nRequirements:\n1. Architecture: At least 3 convolutional layers with batch normalization and dropout\n2. Training: Use Adam optimizer with learning rate scheduling\n3. Evaluation: Track training/validation loss and accuracy per epoch\n4. Visualization: Plot training curves and a confusion matrix on the test set\n5. Output: Print final test accuracy and save the trained model\n\nProvide clean, well-commented code with type hints.",
+      "score": 9.2,
+      "tags": ["deep_learning", "pytorch", "classification"]
+    },
+    {
+      "id": "ex_002",
+      "domain": "ai_ml",
+      "intent": "instruction",
+      "original": "explain transformers",
+      "optimized": "You are an AI researcher and educator. Provide a comprehensive yet accessible explanation of the Transformer architecture as introduced in 'Attention Is All You Need'.\n\nStructure your explanation as follows:\n1. **Problem**: Why were Transformers needed? (limitations of RNNs/LSTMs)\n2. **Core Mechanism**: Self-attention — how it works with Q, K, V matrices\n3. **Architecture**: Encoder-decoder structure, multi-head attention, positional encoding\n4. **Key Innovations**: Why parallel processing matters, layer normalization, residual connections\n5. **Impact**: How Transformers led to BERT, GPT, and modern LLMs\n\nUse analogies for complex concepts. Include a simple diagram description. Target audience: someone with basic ML knowledge.",
+      "score": 9.5,
+      "tags": ["nlp", "transformers", "education"]
+    },
+    {
+      "id": "ex_003",
+      "domain": "coding",
+      "intent": "instruction",
+      "original": "write a rest api",
+      "optimized": "You are a senior backend engineer specializing in Python web development. Build a production-ready REST API using FastAPI for a task management system.\n\nRequirements:\n1. **Endpoints**: CRUD operations for tasks (GET, POST, PUT, DELETE)\n2. **Data Model**: Task with fields — id, title, description, status (todo/in_progress/done), priority (low/medium/high), created_at, updated_at\n3. **Validation**: Use Pydantic models with proper field validation\n4. **Database**: SQLite with SQLAlchemy ORM\n5. **Error Handling**: Proper HTTP status codes and error messages\n6. **Documentation**: Auto-generated OpenAPI/Swagger docs\n7. **Testing**: Include 3 pytest test cases for the main endpoints\n\nFollow RESTful conventions. Include requirements.txt. Code must be immediately runnable.",
+      "score": 9.0,
+      "tags": ["api", "fastapi", "python", "backend"]
+    },
+    {
+      "id": "ex_004",
+      "domain": "coding",
+      "intent": "question",
+      "original": "what is docker",
+      "optimized": "You are a DevOps engineer and technical writer. Explain Docker in a way that's practical and actionable for a software developer.\n\nCover these topics:\n1. **What**: What Docker is and how it differs from virtual machines\n2. **Why**: Real-world problems Docker solves (dependency hell, 'works on my machine', deployment consistency)\n3. **Core Concepts**: Images, containers, Dockerfile, Docker Compose, Docker Hub\n4. **Hands-On Example**: Write a simple Dockerfile for a Python Flask app, explain each line\n5. **Common Commands**: List the 10 most-used Docker commands with brief descriptions\n6. **When NOT to use Docker**: Scenarios where Docker adds unnecessary complexity\n\nFormat: Use headers, bullet points, and code blocks. Keep explanations concise.",
+      "score": 8.8,
+      "tags": ["devops", "docker", "containers"]
+    },
+    {
+      "id": "ex_005",
+      "domain": "devops",
+      "intent": "instruction",
+      "original": "setup cicd pipeline",
+      "optimized": "You are a senior DevOps engineer. Design and implement a complete CI/CD pipeline using GitHub Actions for a Python web application.\n\nPipeline Requirements:\n1. **Trigger**: On push to main and pull requests\n2. **CI Stage**:\n   - Lint code with flake8 and black\n   - Run pytest with coverage report (minimum 80%)\n   - Security scan with bandit\n3. **CD Stage** (on main only):\n   - Build Docker image with semantic versioning\n   - Push to Docker Hub / GitHub Container Registry\n   - Deploy to staging environment\n4. **Notifications**: Slack notification on failure\n5. **Caching**: Cache pip dependencies for faster builds\n\nProvide the complete `.github/workflows/ci-cd.yml` file with comments explaining each step. Include a brief README section on how to set up required secrets.",
+      "score": 9.1,
+      "tags": ["cicd", "github_actions", "automation"]
+    },
+    {
+      "id": "ex_006",
+      "domain": "business",
+      "intent": "creative",
+      "original": "write a business plan",
+      "optimized": "You are a startup advisor and business strategist with 15 years of experience. Draft a lean business plan for a SaaS startup.\n\nStructure the plan as follows:\n1. **Executive Summary** (200 words max)\n2. **Problem Statement**: What pain point does this solve? Include market data.\n3. **Solution**: Product description with 3 key differentiators\n4. **Target Market**: Define ICP (Ideal Customer Profile) with demographics and psychographics\n5. **Revenue Model**: Pricing tiers (Free, Pro, Enterprise) with feature breakdown\n6. **Go-to-Market Strategy**: First 6 months — channels, partnerships, content strategy\n7. **Financial Projections**: Month 1-12 revenue estimates with assumptions\n8. **Team Requirements**: Key hires needed in first year\n9. **Risks & Mitigation**: Top 3 risks with contingency plans\n\nTone: Professional but concise. Use bullet points over paragraphs. Include placeholder numbers that are realistic for a bootstrapped SaaS.",
+      "score": 8.7,
+      "tags": ["startup", "saas", "planning"]
+    },
+    {
+      "id": "ex_007",
+      "domain": "education",
+      "intent": "instruction",
+      "original": "teach me python",
+      "optimized": "You are an experienced Python instructor creating a hands-on learning curriculum. Design a structured 4-week Python learning plan for an absolute beginner.\n\nRequirements:\n- **Week 1**: Variables, data types, operators, string formatting, input/output\n- **Week 2**: Control flow (if/elif/else), loops (for/while), list comprehensions, functions\n- **Week 3**: Data structures (lists, dicts, sets, tuples), file I/O, error handling (try/except)\n- **Week 4**: OOP basics (classes, inheritance), modules/packages, intro to pip and virtual environments\n\nFor each week provide:\n1. Key concepts with 1-paragraph explanations\n2. Three coding exercises (easy → medium → hard)\n3. One mini-project that combines the week's concepts\n4. Common mistakes beginners make\n\nTone: Encouraging and practical. Use real-world analogies. Every concept should have a runnable code example.",
+      "score": 9.3,
+      "tags": ["python", "beginner", "curriculum"]
+    },
+    {
+      "id": "ex_008",
+      "domain": "resume",
+      "intent": "instruction",
+      "original": "improve my resume",
+      "optimized": "You are a professional resume writer and career coach specializing in tech roles. Review and rewrite the following resume to maximize ATS compatibility and recruiter engagement.\n\nOptimization guidelines:\n1. **Format**: Clean, single-column layout. No tables, images, or special characters.\n2. **Summary**: Write a 3-line professional summary highlighting years of experience, core skills, and career objective.\n3. **Experience**: Rewrite each bullet point using the STAR method (Situation, Task, Action, Result). Start with strong action verbs. Include quantified achievements (%, $, time saved).\n4. **Skills**: Organize into categories (Languages, Frameworks, Tools, Soft Skills). Match keywords to the target job description.\n5. **Education**: Include relevant coursework, GPA (if > 3.5), honors.\n6. **ATS Keywords**: Naturally integrate industry-standard keywords throughout.\n\nProvide the rewritten resume AND a list of 5 specific improvements made with explanations.",
+      "score": 9.0,
+      "tags": ["career", "resume", "ats"]
+    },
+    {
+      "id": "ex_009",
+      "domain": "data_science",
+      "intent": "instruction",
+      "original": "analyze this data",
+      "optimized": "You are a senior data scientist. Perform a comprehensive exploratory data analysis (EDA) on the provided dataset using Python.\n\nAnalysis Plan:\n1. **Data Overview**: Shape, dtypes, memory usage, first/last 5 rows\n2. **Missing Values**: Heatmap visualization, percentage per column, imputation strategy recommendation\n3. **Statistical Summary**: describe() for numerical columns, value_counts() for categorical columns\n4. **Distributions**: Histograms for all numerical features, bar charts for categorical features\n5. **Correlations**: Correlation matrix with heatmap, identify top 5 correlated pairs\n6. **Outlier Detection**: IQR method and box plots for key numerical features\n7. **Key Insights**: List 5 actionable insights discovered from the analysis\n\nTools: pandas, matplotlib, seaborn. Provide complete, runnable code in a single script. Add markdown-style comments explaining each section.",
+      "score": 9.1,
+      "tags": ["eda", "pandas", "visualization"]
+    },
+    {
+      "id": "ex_010",
+      "domain": "general",
+      "intent": "question",
+      "original": "how to be productive",
+      "optimized": "You are a productivity researcher and performance coach. Provide an evidence-based guide to improving daily productivity for a knowledge worker.\n\nStructure your response:\n1. **Morning Routine** (first 2 hours): 3 science-backed habits with citations\n2. **Deep Work Blocks**: How to structure focused work sessions (Pomodoro vs. time-blocking vs. flow states)\n3. **Energy Management**: Aligning task difficulty with circadian rhythm peaks\n4. **Tool Stack**: Recommend 5 specific tools/apps with use cases (not generic suggestions)\n5. **Common Traps**: 5 productivity myths that actually reduce output\n6. **Weekly Review**: A 30-minute Friday review template\n\nConstraints: Focus on actionable tactics, not motivational platitudes. Each recommendation should cite a study, book, or expert. Tone: Direct and practical. Length: ~800 words.",
+      "score": 8.5,
+      "tags": ["productivity", "self_improvement", "habits"]
+    },
+    {
+      "id": "ex_011",
+      "domain": "ai_ml",
+      "intent": "instruction",
+      "original": "build a chatbot",
+      "optimized": "You are an NLP engineer specializing in conversational AI. Build a context-aware chatbot using Python with the following specifications:\n\n1. **Architecture**: Use a retrieval-augmented generation (RAG) approach\n2. **Knowledge Base**: Load documents from a local directory (PDF/TXT support)\n3. **Embedding**: Use sentence-transformers for document vectorization\n4. **Vector Store**: FAISS for similarity search\n5. **Response Generation**: Template-based responses with retrieved context\n6. **Memory**: Maintain conversation history (last 5 turns) for context\n7. **Interface**: Simple command-line chat loop with '/quit' to exit\n\nProvide modular, well-documented code. Include a sample knowledge base with 3 example documents. The chatbot should gracefully handle queries outside its knowledge base.",
+      "score": 8.9,
+      "tags": ["chatbot", "rag", "nlp"]
+    },
+    {
+      "id": "ex_012",
+      "domain": "coding",
+      "intent": "instruction",
+      "original": "make a website",
+      "optimized": "You are a full-stack web developer. Build a modern, responsive portfolio website using HTML5, CSS3, and vanilla JavaScript.\n\nRequirements:\n1. **Sections**: Hero with animated typing effect, About, Projects (card grid with hover effects), Skills (progress bars), Contact form\n2. **Design**: Dark theme with accent color (#00e5a0), glassmorphism cards, smooth scroll, CSS animations on scroll\n3. **Responsive**: Mobile-first design, works on 320px to 1920px screens\n4. **Performance**: Lazy-loaded images, minified CSS, no external CSS frameworks\n5. **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation, color contrast WCAG AA\n6. **SEO**: Meta tags, Open Graph tags, structured data (JSON-LD)\n\nProvide complete index.html, style.css, and script.js files. All code must be production-ready with no placeholder content.",
+      "score": 9.4,
+      "tags": ["web", "frontend", "portfolio"]
+    }
+  ],
+  "domain_keywords": {
+    "ai_ml": ["neural network", "machine learning", "deep learning", "nlp", "transformer", "model", "training", "dataset", "classification", "regression", "clustering", "llm", "gpt", "bert", "ai", "artificial intelligence", "computer vision", "reinforcement learning", "fine-tuning", "embedding", "tokenizer", "chatbot"],
+    "coding": ["code", "function", "class", "api", "rest", "database", "algorithm", "debug", "refactor", "implement", "build", "create", "website", "app", "application", "programming", "software", "library", "framework", "frontend", "backend"],
+    "devops": ["docker", "kubernetes", "cicd", "ci/cd", "pipeline", "deploy", "container", "aws", "cloud", "terraform", "ansible", "jenkins", "monitoring", "infrastructure", "server", "nginx", "linux", "git", "github actions"],
+    "data_science": ["data", "pandas", "analysis", "visualization", "statistics", "eda", "sql", "dashboard", "report", "csv", "excel", "chart", "graph", "correlation", "distribution", "tableau", "power bi"],
+    "business": ["business", "strategy", "marketing", "startup", "revenue", "customer", "market", "plan", "pitch", "investor", "growth", "sales", "product", "brand", "competitive"],
+    "education": ["learn", "teach", "tutorial", "course", "curriculum", "beginner", "student", "explain", "guide", "lesson", "study", "practice", "exercise"],
+    "resume": ["resume", "cv", "cover letter", "job application", "interview", "career", "hiring", "recruiter", "linkedin", "portfolio"],
+    "general": []
+  }
+}

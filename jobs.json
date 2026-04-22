@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Senior ML Engineer",
+    "company": "DeepMind Technologies",
+    "role_type": "AI/ML",
+    "description": "We are looking for a Senior ML Engineer to design and build large-scale machine learning systems. You will work with Python, TensorFlow, PyTorch, and Kubernetes. Experience with MLflow, model monitoring, and data pipelines required. Strong understanding of LLMs, transformers, and vector databases like Pinecone or Weaviate is a plus. Familiarity with Docker, CI/CD, and cloud platforms (AWS, GCP) expected.",
+    "location": "Remote",
+    "salary": "180000",
+    "posted_days_ago": 2
+  },
+  {
+    "id": 2,
+    "title": "MLOps Engineer",
+    "company": "Stripe AI",
+    "role_type": "MLOps",
+    "description": "Join our MLOps team to operationalize machine learning models at scale. Must have hands-on experience with Kubeflow, MLflow, Apache Airflow, and Docker. Strong Python skills required. You'll manage model deployment pipelines, monitor model drift, and build CI/CD workflows using GitHub Actions. Kubernetes and Helm experience preferred. Familiarity with data versioning tools like DVC.",
+    "location": "San Francisco, CA",
+    "salary": "175000",
+    "posted_days_ago": 1
+  },
+  {
+    "id": 3,
+    "title": "DevOps Engineer - AI Platform",
+    "company": "Anthropic",
+    "role_type": "DevOps",
+    "description": "Looking for a DevOps Engineer to support our AI platform infrastructure. Skills required: Terraform, Kubernetes, Docker, GitHub Actions, and monitoring tools like Prometheus and Grafana. You will automate infrastructure provisioning, manage cloud resources on AWS and GCP, and ensure reliability of ML training pipelines. Experience with Python scripting, Helm charts, and service mesh technologies (Istio) preferred.",
+    "location": "Remote",
+    "salary": "165000",
+    "posted_days_ago": 3
+  },
+  {
+    "id": 4,
+    "title": "AI Engineer - LLM Applications",
+    "company": "OpenAI",
+    "role_type": "AI/ML",
+    "description": "Build next-generation LLM-powered applications. Required skills: Python, LangChain, LlamaIndex, OpenAI API, vector databases (Pinecone, Chroma), prompt engineering, and RAG architectures. You should understand fine-tuning techniques, RLHF, and model evaluation frameworks. FastAPI for building AI APIs, PostgreSQL for data storage. Experience with agentic AI systems strongly preferred.",
+    "location": "San Francisco, CA",
+    "salary": "200000",
+    "posted_days_ago": 1
+  },
+  {
+    "id": 5,
+    "title": "Data Engineer",
+    "company": "Databricks",
+    "role_type": "Data",
+    "description": "Seeking a Data Engineer to build and maintain large-scale data pipelines. Core skills: Apache Spark, Apache Kafka, dbt, Airflow, SQL, and Python. Experience with cloud data warehouses (Snowflake, BigQuery, Redshift) required. Familiarity with Delta Lake, data lake architectures, and streaming pipelines. Proficiency in Docker and basic Kubernetes for pipeline orchestration.",
+    "location": "Remote",
+    "salary": "155000",
+    "posted_days_ago": 5
+  },
+  {
+    "id": 6,
+    "title": "Senior MLOps / Platform Engineer",
+    "company": "Scale AI",
+    "role_type": "MLOps",
+    "description": "Lead MLOps platform engineering for large-scale AI systems. Must have: Kubeflow, Argo Workflows, MLflow, TensorFlow Serving, Triton Inference Server. Strong Python and Go experience. You'll build model serving infrastructure, feature stores using Feast, and automate model retraining pipelines. Monitoring with Prometheus, Grafana, and custom dashboards. Cloud experience: AWS SageMaker, GCP Vertex AI.",
+    "location": "New York, NY",
+    "salary": "190000",
+    "posted_days_ago": 2
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning Researcher",
+    "company": "Meta AI",
+    "role_type": "AI/ML",
+    "description": "Research and develop state-of-the-art ML models. Deep expertise in PyTorch, transformers, diffusion models, and reinforcement learning required. Proficiency in Python, CUDA programming, and distributed training frameworks (DeepSpeed, FSDP). Experience publishing at NeurIPS, ICML, or ICLR a plus. Knowledge of multimodal models, retrieval-augmented generation, and model compression techniques.",
+    "location": "Menlo Park, CA",
+    "salary": "220000",
+    "posted_days_ago": 4
+  },
+  {
+    "id": 8,
+    "title": "Site Reliability Engineer - ML Systems",
+    "company": "Netflix",
+    "role_type": "DevOps",
+    "description": "Ensure reliability of ML infrastructure at Netflix scale. Required: Kubernetes, Terraform, Prometheus, Grafana, PagerDuty, and strong Linux system administration. Python and Go for automation. Experience with incident response, SLOs, and error budgets. Familiarity with Spinnaker for deployments, and Chaos Engineering practices. AWS cloud expertise required.",
+    "location": "Los Gatos, CA",
+    "salary": "185000",
+    "posted_days_ago": 6
+  },
+  {
+    "id": 9,
+    "title": "AI Product Engineer",
+    "company": "Cohere",
+    "role_type": "AI/ML",
+    "description": "Build AI-powered product features using LLMs. Skills: Python, FastAPI, React, PostgreSQL, Redis, and Docker. Deep understanding of LLM APIs, prompt engineering, and RAG systems. LangChain and vector search (Elasticsearch, Pinecone) experience required. You'll build APIs, integrate ML models into products, and work closely with data science teams. GitHub Actions for CI/CD.",
+    "location": "Remote",
+    "salary": "160000",
+    "posted_days_ago": 3
+  },
+  {
+    "id": 10,
+    "title": "Cloud ML Infrastructure Engineer",
+    "company": "Google DeepMind",
+    "role_type": "MLOps",
+    "description": "Design and operate ML training infrastructure on GCP. Required skills: Kubernetes, Docker, Python, Terraform, Google Cloud (Vertex AI, GKE, BigQuery). Experience with distributed training, TPU/GPU cluster management, and Kubeflow pipelines. Strong understanding of networking, storage systems, and cost optimization in cloud environments. Monitoring with Cloud Monitoring and custom Prometheus exporters.",
+    "location": "London, UK",
+    "salary": "195000",
+    "posted_days_ago": 1
+  },
+  {
+    "id": 11,
+    "title": "NLP Engineer",
+    "company": "Hugging Face",
+    "role_type": "AI/ML",
+    "description": "Join our NLP team to build and fine-tune transformer models. Core skills: Python, PyTorch, Hugging Face Transformers, tokenizers, and datasets library. Experience with BERT, GPT, T5, and other transformer architectures. Model evaluation, benchmarking, and optimization using ONNX and TensorRT. Familiarity with the Hugging Face Hub, Spaces, and Gradio for demos.",
+    "location": "Remote",
+    "salary": "170000",
+    "posted_days_ago": 2
+  },
+  {
+    "id": 12,
+    "title": "DataOps / Analytics Engineer",
+    "company": "Airbnb",
+    "role_type": "Data",
+    "description": "Build robust data pipelines and analytics infrastructure. Must have: dbt, Apache Spark, Airflow, SQL (advanced), Python, and Tableau. Experience with data modeling, data quality frameworks, and metadata management. Familiarity with Presto/Trino, Hive, and Parquet/Avro formats. Comfortable with cloud data warehouses: Snowflake or Redshift. GitHub-based version control and CI/CD for data workflows.",
+    "location": "San Francisco, CA",
+    "salary": "145000",
+    "posted_days_ago": 7
+  },
+  {
+    "id": 13,
+    "title": "Agentic AI Systems Engineer",
+    "company": "Cognition AI",
+    "role_type": "AI/ML",
+    "description": "Design and build autonomous AI agent systems. Required: Python, LangChain, AutoGen, CrewAI, and deep experience with LLM orchestration patterns. Proficiency in tool-use, function calling, multi-agent coordination, and memory systems (Redis, vector DBs). FastAPI backend development, Docker containerization, and async Python (asyncio) required. Understanding of planning algorithms and ReAct / chain-of-thought prompting.",
+    "location": "Remote",
+    "salary": "210000",
+    "posted_days_ago": 1
+  },
+  {
+    "id": 14,
+    "title": "Platform Engineer - AI Infrastructure",
+    "company": "Mistral AI",
+    "role_type": "DevOps",
+    "description": "Own and evolve AI training and serving infrastructure. Core skills: Kubernetes (advanced), Helm, ArgoCD, Terraform, Python, and Rust basics. Experience with GPU scheduling, NVIDIA CUDA toolchain, and high-performance networking (InfiniBand, RDMA). Implement observability stacks: Prometheus, Loki, Grafana, OpenTelemetry. Automate everything with GitHub Actions and custom operators.",
+    "location": "Paris, France",
+    "salary": "175000",
+    "posted_days_ago": 4
+  },
+  {
+    "id": 15,
+    "title": "ML Platform Lead",
+    "company": "Waymo",
+    "role_type": "MLOps",
+    "description": "Lead the ML platform team responsible for training, evaluation, and deployment of autonomous driving models. Required: Python, C++, Kubernetes, MLflow, TensorFlow, PyTorch, and distributed systems design. Experience with feature engineering at scale, real-time data pipelines (Kafka, Flink), and model serving (Triton, TF Serving). Strong leadership, system design, and oncall reliability practices.",
+    "location": "Mountain View, CA",
+    "salary": "230000",
+    "posted_days_ago": 2
+  }
+]

@@ -1,0 +1,280 @@
+# CareerPilot AI — Complete Setup & Run Reference
+# Windows CMD instructions — copy-paste ready
+
+==============================================================
+1. FULL FOLDER STRUCTURE
+==============================================================
+
+careerpilot-ai/
+│
+├── api/
+│   └── main.py                  ← FastAPI backend (Phase 3)
+│
+├── dashboard/
+│   └── app.py                   ← Streamlit UI (Phase 1+2)
+│
+├── data/
+│   ├── jobs.csv                 ← Sample job postings dataset
+│   └── skill_taxonomy.json      ← 80+ skills across 7 categories
+│
+├── models/
+│   ├── __init__.py
+│   ├── plan_generator.py        ← 4-week learning plan (5 roles)
+│   ├── resume_analyzer.py       ← PDF resume skill extractor
+│   ├── role_manager.py          ← Role registry (5 career paths)
+│   └── skill_extractor.py       ← NLP keyword skill extractor
+│
+├── pipelines/
+│   ├── __init__.py
+│   └── data_loader.py           ← CSV loader + validator
+│
+├── services/
+│   ├── __init__.py
+│   ├── planner_service.py       ← Service layer for plan API
+│   ├── resume_service.py        ← Service layer for resume API
+│   └── skills_service.py        ← Service layer for skills API
+│
+├── utils/
+│   ├── __init__.py
+│   └── response_models.py       ← Pydantic schemas (FastAPI)
+│
+├── agents/                      ← Empty — Phase 4 (Agentic AI)
+│
+├── README.md
+├── requirements.txt
+├── test_phase1.py
+└── test_phase2.py
+
+
+==============================================================
+2. REQUIREMENTS.TXT (complete — paste this exactly)
+==============================================================
+
+pandas==2.1.4
+streamlit==1.31.0
+pdfplumber==0.10.3
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==2.6.1
+python-multipart==0.0.9
+
+
+==============================================================
+3. WINDOWS CMD — FULL SETUP (run once)
+==============================================================
+
+Step 1: Open CMD and navigate to your project folder
+---------------------------------------------------------
+cd C:\Users\YourName\careerpilot-ai
+
+
+Step 2: Create and activate virtual environment
+---------------------------------------------------------
+python -m venv venv
+venv\Scripts\activate
+
+You should see (venv) in your prompt.
+
+
+Step 3: Upgrade pip (avoids install issues)
+---------------------------------------------------------
+python -m pip install --upgrade pip
+
+
+Step 4: Install all dependencies
+---------------------------------------------------------
+pip install -r requirements.txt
+
+
+Step 5: Verify installation
+---------------------------------------------------------
+python -c "import pandas, streamlit, pdfplumber, fastapi, uvicorn, pydantic; print('All packages OK')"
+
+
+Step 6: Run Phase 2 smoke test (optional but recommended)
+---------------------------------------------------------
+python test_phase2.py
+
+
+==============================================================
+4. HOW TO START THE FASTAPI BACKEND
+==============================================================
+
+Open CMD Terminal 1:
+---------------------------------------------------------
+cd C:\Users\YourName\careerpilot-ai
+venv\Scripts\activate
+uvicorn api.main:app --reload --port 8000
+
+Expected output:
+  INFO:     Uvicorn running on http://127.0.0.1:8000
+  INFO:     Application startup complete.
+
+API docs (auto-generated Swagger UI):
+  http://localhost:8000/docs
+
+API ReDoc:
+  http://localhost:8000/redoc
+
+API Endpoints:
+  GET  http://localhost:8000/health
+  POST http://localhost:8000/skills
+  POST http://localhost:8000/resume/text
+  POST http://localhost:8000/resume/upload
+  POST http://localhost:8000/plan
+
+
+==============================================================
+5. HOW TO START THE STREAMLIT DASHBOARD
+==============================================================
+
+Open CMD Terminal 2 (new window — keep FastAPI running in Terminal 1):
+---------------------------------------------------------
+cd C:\Users\YourName\careerpilot-ai
+venv\Scripts\activate
+streamlit run dashboard/app.py
+
+Expected output:
+  Local URL:  http://localhost:8501
+  Network URL: http://192.168.x.x:8501
+
+Browser opens automatically at http://localhost:8501
+
+
+NOTE: The Streamlit dashboard works standalone (no FastAPI needed).
+FastAPI is only required if you want to consume the REST API
+separately or connect a frontend/mobile app.
+
+
+==============================================================
+6. FILES YOU MUST NOT MISS (checklist)
+==============================================================
+
+Run this in CMD to verify all required files exist:
+---------------------------------------------------------
+python -c "
+import os
+required = [
+    'api/main.py',
+    'dashboard/app.py',
+    'data/jobs.csv',
+    'data/skill_taxonomy.json',
+    'models/__init__.py',
+    'models/plan_generator.py',
+    'models/resume_analyzer.py',
+    'models/role_manager.py',
+    'models/skill_extractor.py',
+    'pipelines/__init__.py',
+    'pipelines/data_loader.py',
+    'services/__init__.py',
+    'services/skills_service.py',
+    'services/resume_service.py',
+    'services/planner_service.py',
+    'utils/__init__.py',
+    'utils/response_models.py',
+    'requirements.txt',
+]
+missing = [f for f in required if not os.path.exists(f)]
+if missing:
+    print('MISSING FILES:')
+    for f in missing: print(f'  - {f}')
+else:
+    print('All required files present.')
+"
+
+Files that must NOT be empty (need content — not just created blank):
+  data/jobs.csv                ← must have 15+ job rows
+  data/skill_taxonomy.json     ← must have the skill categories dict
+  models/__init__.py           ← can be empty (just needs to exist)
+  pipelines/__init__.py        ← can be empty
+  services/__init__.py         ← can be empty
+  utils/__init__.py            ← can be empty
+
+
+==============================================================
+7. IMPORT FIXES — WHAT TO WATCH OUT FOR
+==============================================================
+
+Issue 1: ModuleNotFoundError for any careerpilot module
+---------------------------------------------------------
+Cause:   Running Python from the wrong directory.
+Fix:     Always run from the project ROOT (careerpilot-ai/), not
+         from inside a subfolder.
+
+  WRONG:  cd careerpilot-ai\dashboard && python app.py
+  RIGHT:  cd careerpilot-ai && streamlit run dashboard/app.py
+
+
+Issue 2: ModuleNotFoundError: No module named 'pydantic'
+---------------------------------------------------------
+Cause:   pydantic not installed or using wrong Python/venv.
+Fix:
+  venv\Scripts\activate
+  pip install pydantic==2.6.1
+
+
+Issue 3: ModuleNotFoundError: No module named 'pdfplumber'
+---------------------------------------------------------
+Fix:
+  pip install pdfplumber==0.10.3
+
+
+Issue 4: ModuleNotFoundError: No module named 'python_multipart'
+---------------------------------------------------------
+Cause:   Required by FastAPI for file uploads (/resume/upload).
+Fix:
+  pip install python-multipart==0.0.9
+
+
+Issue 5: Pydantic v1 vs v2 error (BaseSettings or orm_mode)
+---------------------------------------------------------
+Cause:   Old pydantic v1 syntax used with pydantic v2.
+Fix:     requirements.txt already pins pydantic==2.6.1.
+         If you installed manually, run:
+  pip install pydantic==2.6.1 --force-reinstall
+
+
+Issue 6: Streamlit: 'services' module not found
+---------------------------------------------------------
+Cause:   Streamlit is launched from the dashboard/ subfolder.
+Fix:     Always launch from project root:
+  cd careerpilot-ai
+  streamlit run dashboard/app.py        (correct)
+  NOT: streamlit run app.py             (wrong — inside dashboard/)
+
+
+Issue 7: FileNotFoundError: jobs.csv or skill_taxonomy.json
+---------------------------------------------------------
+Cause:   data/ files missing or wrong working directory.
+Fix:     Ensure you are in careerpilot-ai/ when running anything.
+         Both files use Path(__file__).parent.parent / 'data' /
+         so they resolve relative to the module file, not CWD.
+         This is safe as long as the data/ folder is in the project root.
+
+
+Issue 8: UnicodeDecodeError reading CSV on Windows
+---------------------------------------------------------
+Cause:   Windows default encoding is cp1252, not UTF-8.
+Fix:     Open data_loader.py and change:
+           df = pd.read_csv(self.path)
+         to:
+           df = pd.read_csv(self.path, encoding='utf-8')
+
+
+==============================================================
+QUICK REFERENCE — BOTH SERVERS SIDE BY SIDE
+==============================================================
+
+Terminal 1 (FastAPI):
+  cd C:\Users\YourName\careerpilot-ai
+  venv\Scripts\activate
+  uvicorn api.main:app --reload --port 8000
+  → http://localhost:8000/docs
+
+Terminal 2 (Streamlit):
+  cd C:\Users\YourName\careerpilot-ai
+  venv\Scripts\activate
+  streamlit run dashboard/app.py
+  → http://localhost:8501
+
+==============================================================

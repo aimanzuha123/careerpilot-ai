@@ -1,0 +1,16 @@
+# ── AI Prompt Optimizer ── requirements.txt ──
+# Core
+streamlit>=1.32.0
+python-dotenv>=1.0.0
+
+# NLP (rule-based mode)
+scikit-learn>=1.4.0
+
+# LLM (optional — only needed if using OpenAI mode)
+openai>=1.12.0
+
+# Testing
+pytest>=8.0.0
+
+# Utilities
+numpy>=1.26.0
